@@ -1,0 +1,37 @@
+$pc-s:767px;
+$pc-m:1024px;
+$pc-l:1300px;
+
+
+
+//pc-s
+ @mixin pc-s() {
+    @media all and (min-width: $pc-s) {
+        @content;
+    }
+}
+//pc-m
+ @mixin pc-m() {
+    @media all and (min-width:$pc-m) {
+        @content;
+    }
+}
+//pc-l
+ @mixin pc-l() {
+    @media all and (min-width: $pc-l) {
+        @content;
+    }
+}
+
+
+@mixin RWD-font-size($s,$m,$l){
+    @include pc-s {
+        font-size: $s;
+    }
+    @include pc-m {
+        font-size: $m;
+    }
+    @include pc-l {
+        font-size: $l;
+    }
+}
